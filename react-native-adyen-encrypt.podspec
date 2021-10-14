@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
                    DESC
   s.homepage     = "https://github.com/voomflights/react-native-adyen-encrypt"
   s.license      = "MIT"
-  s.platforms    = { :ios => "10.0" }
+  s.platforms    = { :ios => "11.0" }
   s.authors      = { "voompair" => "voompair@voom.flights" }
   s.source       = { :git => "https://github.com/voomflights/react-native-adyen-encrypt.git", :tag => "#{s.version}" }
 
@@ -19,6 +19,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.dependency "React"
-  s.dependency "Adyen", '3.8.2'
+  s.dependency "Adyen", '4.1.0'
 end
 
