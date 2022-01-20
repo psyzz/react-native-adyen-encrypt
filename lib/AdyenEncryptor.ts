@@ -57,32 +57,6 @@ class AdyenEncryptor {
         NativeAdyenEncryptor.encryptWithData(data)
         return promise
     }
-
-    identify(token: String, paymentData: String): Promise<String> {
-        const promise = this.generatePromise<String>();
-        NativeAdyenEncryptor.identify(token, paymentData);
-        return promise;
-    }
-
-    challenge(token: String, paymentData: String): Promise<String> {
-        const promise = this.generatePromise<String>();
-        NativeAdyenEncryptor.challenge(token, paymentData);
-        return promise;
-    }
-
-    redirect(url: String, paymentData: String): Promise<String> {
-        const promise = this.generatePromise<String>();
-        NativeAdyenEncryptor.redirect(url, paymentData);
-        return promise;
-    }
-
-    getRedirectUrl(): Promise<String> {
-        const promise = this.generatePromise<String>();
-        NativeAdyenEncryptor.getRedirectUrl();
-        return promise;
-    }
-
-
 }
 
 export default AdyenEncryptor
