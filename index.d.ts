@@ -10,13 +10,5 @@ declare module 'react-native-adyen-encrypt' {
         constructor(adyenPublicKey: string);
 
         encryptCard(cardForm: CardForm);
-
-        identify(token: String, paymentData: String): Promise<String>;
-
-        challenge(token: String, paymentData: String): Promise<String>;
-
-        redirect(url: String, paymentData: String): Promise<String>;
-
-        getRedirectUrl(): Promise<String>;
     }
 }
