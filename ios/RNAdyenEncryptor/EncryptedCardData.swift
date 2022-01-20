@@ -17,10 +17,10 @@ public struct EncryptedCardData {
   let publicKey: String
 
   var toJSON: [String: String] {
-    let card = CardEncryptor.Card(number: cardNumber, securityCode: securityCode, expiryMonth: expiryMonth, expiryYear: expiryYear)
+    let card = Card(number: cardNumber, securityCode: securityCode, expiryMonth: expiryMonth, expiryYear: expiryYear)
     var json: [String: String] = [:]
     do {
-        let encryptedCard = try CardEncryptor.encryptedCard(for: card, publicKey: publicKey)
+        let encryptedCard = try CardEncryptor.encrypt(card: card, with: publicKey)
 
         if cardNumber != nil { json["encryptedCardNumber"] = encryptedCard.number }
         if expiryMonth != nil { json["encryptedExpiryMonth"] = encryptedCard.expiryMonth }
