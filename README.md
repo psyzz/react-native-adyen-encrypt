@@ -10,7 +10,7 @@
 4. Verify that your SWIFT_VERSION is >= 5
 5. `pod install`
 
-iOS uses [Adyen](https://github.com/Adyen/adyen-ios) SDK version 3.6.0
+iOS uses [Adyen](https://github.com/Adyen/adyen-ios) SDK version 4.4.0
 
 ### Android
 
@@ -47,4 +47,9 @@ promise.then((data: EncryptedCard) => {
 
 Check documentation for native code changes required to support redirects
 https://docs.adyen.com/checkout/android/components#redirect-component
+
+## VISA certificate update
+
+Since 1st february VISA requires a new certificate to 3DS2. The upgrade to version 4.4.0 solves the problem. You can see more in the link below:
+https://docs.adyen.com/online-payments/visa-root-certificate-update#what-you-need-to-do
 
